@@ -18,18 +18,31 @@ class Solution:
 
         while len(q) > 0:
             curr = q.pop()
-            result.append([curr[0], curr[1]])
-            if curr[0].left is not None:
-                result.append(curr[0])
-                q.appendleft([curr[0].left, curr[1] + 1])
-            if curr[0].right is not None:
-                result.append(curr[0].right.val)
-                q.appendleft(curr[0].right)
+            node = curr[0]
+            if node is None:
+                continue
+            val = node.val
+            dist = curr[1]
+
+            if len(result) < dist + 1:
+                result.append([])
+            result[dist].append(val)
             
+            q.appendleft([node.left, dist + 1])
+            q.appendleft([node.right, dist + 1])
+        return result
 
 def main():
     x = Solution()
-    print(x.levelOrder(None))
+    root = TreeNode(1)
+    root.left = TreeNode(2)
+    root.right = TreeNode(3)
+    root.left.left = TreeNode(4)
+    root.left.right = TreeNode(5)
+    root.right.left = TreeNode(6)
+    root.right.right = TreeNode(7)
+
+    print(x.levelOrder(root))
 
 if __name__ == "__main__":
     main()
