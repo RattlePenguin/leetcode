@@ -1,0 +1,5 @@
+convert prereqs into a graph
+    directed
+    might be disconnected
+if cycle is found, return false
+topological sort
