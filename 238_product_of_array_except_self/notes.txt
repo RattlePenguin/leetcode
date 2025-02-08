@@ -1,0 +1,6 @@
+prefix / suffix products
+
+[1,2,3,4]
+prod[0] = prod[1] * prod[2] * prod[3] // i.e. 1 * suffix product
+prod[1] = prod[0] * prod[2] * prod[3] // i.e. prefix product * suffix product
+
