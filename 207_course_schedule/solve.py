@@ -27,6 +27,9 @@ class Solution:
             
             pNode.neighbours.append(courseNode)
         
+        return self.findCycle(nodes)
+    
+    def findCycle(nodes: List['Node']) -> bool:
         
 
 def main():
