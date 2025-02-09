@@ -1,0 +1,8 @@
+A pair of indices (i, j) is a bad pair if i < j and j - i != nums[j] - nums[i].
+
+Also, bad pair:
+if i < j and nums[i] - i != nums[j] - j
+
+for i = 0; i < len(nums); ++i
+    for j = i + 1; j < len(nums); ++j
+        so on
