@@ -1,0 +1,14 @@
+Recursion
+If at any point, left > val or right < val, return False up the call stack
+- Fails when subtree is a proper bst, but greater than 1 level a child is out of place
+e.g.
+   5
+  1 10
+n n 3 20
+
+Not a valid bst
+
+Traversals
+In order traversal of a valid BST should be increasing
+Example from above:
+1 5 3 10 20 // Incorrect
